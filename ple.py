@@ -104,15 +104,7 @@ def draw(root):
     edgeLabelDict = {}
 
     _draw(G, root, edgeLabelDict)
-#    pos=nx.circular_layout(G)
-#    pos=nx.spectral_layout(G)
-#    pos=nx.spring_layout(G)
-#    pos=nx.spring_layout(G, pos=pos)
     pos=nx.spring_layout(G, iterations=150)
-#    pos=nx.circular_layout(G)
-#    pos=nx.fruchterman_reingold_layout(G)
-#    pos=nx.random_layout(G)
-#    pos=nx.shell_layout(G)
 
     nx.draw_networkx_nodes(G,pos,node_size=50, node_color="white")
     nx.draw_networkx_edges(G,pos, width=1,alpha=0.5,edge_color='black')
