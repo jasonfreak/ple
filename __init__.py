@@ -1,3 +1,3 @@
-import ple
+from ple import FeatureUnionExt, PipelineExt
 
-__all__ = ['ple']
+__all__ = ['FeatureUnionExt', 'PipelineExt']
