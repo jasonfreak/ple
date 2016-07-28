@@ -5,7 +5,6 @@ from sklearn.pipeline import Pipeline, FeatureUnion, _fit_one_transformer, _fit_
 from sklearn.externals.joblib import Parallel, delayed
 from scipy import sparse
 import numpy as np
-import networkx as nx
 from matplotlib import pyplot as plt
 from default import doWithDefault
 from one2one import doWithSelector
@@ -145,6 +144,7 @@ def fall_layout(root, x_space=1, y_space=1):
     return layout
 
 def draw(root):
+    import networkx as nx
     G = nx.DiGraph()
     nodeLabelDict = {}
     edgeLabelDict = {}
